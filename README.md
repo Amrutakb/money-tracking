@@ -1,8 +1,8 @@
 About the Project:
 
 This is a full-stack expense tracker website bulit using MERN. 
-/n MongoDB atlas is used for storing the DataBase.
-/n React js is used for the Front-End and Express js is used for the Back-End.
+ MongoDB atlas is used for storing the DataBase.
+React js is used for the Front-End and Express js is used for the Back-End.
 
 
 # Getting Started with Create React App

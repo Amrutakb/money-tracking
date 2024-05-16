@@ -1,38 +1,151 @@
-.App {
-  text-align: center;
+* {
+  box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+body {
+  position: relative; /* Required for the overlay */
+  background-color: rgb(24, 22, 22);
+  background-image: url('D:/Amrutha files/projects/money-tracking/background.jpg'); /* Add your image path here */
+  background-size: cover; /* Ensure the image covers the entire background */
+  background-position: center; /* Center the background image */
+  color: aliceblue;
   display: flex;
-  flex-direction: column;
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+  height: 100vh; /* Make body take the full height of the viewport */
+  margin: 0; /* Remove default margin */
+}
+
+body::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Dark overlay */
+  z-index: 0; /* Place it behind content */
+}
+
+main {
+  position: relative; /* Ensure content is above the overlay */
+  z-index: 1; /* Ensure content is above the overlay */
+  display: flex;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  max-width: fit-content;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.container {
+  background-color: rgba(255, 255, 255, 0.1); /* Semi-transparent white background */
+  border-radius: 10px; /* Rounded corners */
+  padding: 30px; /* Padding around the content */
+  width: 600px; /* Increase the width */
+  margin: 0 auto; /* Center horizontally */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Shadow effect */
+}
+
+.container h1 {
+  margin: 0;
+  text-align: center;
+  font-size: 2rem;
+  color: white;
+  margin-bottom: 20px; /* Add some space below the heading */
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+form {
+  margin: 20px;
+}
+
+form input {
+  width: 100%;
+  background-color: transparent;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+form input[type="datetime-local"] {
+  color: grey;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+form div.inputdescription {
+  text-align: center;
+  display: flex;
+  margin-bottom: 10px;
+}
+
+form div.basic {
+  display: flex;
+  gap: 5px;
+  border: 10px;
+  border-color: rgb(119, 101, 101);
+  margin-bottom: 5px;
+}
+
+button {
+  align-items: center;
+  border-radius: 3px;
+  width: 100%;
+  margin-top: 10px;
+  padding: 5px;
+}
+
+div.transactions {
+  margin: 10px;
+}
+
+div.item {
+  display: flex;
+  justify-content: space-between;
+  padding: 5px;
+  border-top: 1px solid #565972;
+}
+
+div.item:first-child {
+  border-top: 0;
+}
+
+div.left {
+  padding: 1px;
+  width: 60%; /* Adjust width as needed */
+}
+
+div.right {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  padding: 1px;
+  width: 40%; /* Adjust width as needed */
+}
+
+div.transactions div.product {
+  font-size: 1.5rem;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+div.transactions div.description {
+  color: #888;
+  font-size: .7rem;
+}
+
+div.transactions div.price-red {
+  color: red;
+}
+
+div.transactions div.price-green {
+  color: green;
+}
+
+div.transactions div.date {
+  color: #ccc; /* Change this to a lighter color */
+  font-size: .7rem;
+}
+
+.red {
+  color: red;
+}
+
+.green {
+  color: green;
 }

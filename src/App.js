@@ -52,7 +52,7 @@ function App() {
   return (
     <main>
       <div className="container">
-        <h1>{balance} </h1>
+        <h1>BALANCE : {balance} </h1>
         <form onSubmit={addNewTransactions}>
           <div className="basic">
             <input
